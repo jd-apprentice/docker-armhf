@@ -8,7 +8,7 @@ ARG FOLDER
 
 WORKDIR /app
 
-RUN apk add --no-cache nodejs=18.18.2-r1 npm=10.2.4-r0 && \
+RUN apk add --no-cache nodejs npm && \
     npm install -g http-server@14.1.1
 
 EXPOSE ${PORT:-3500}

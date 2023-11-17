@@ -1,19 +1,19 @@
-instance:
-        docker buildx create --name armv7 \
-                --platform "linux/arm/v7" \
-                --driver "docker-container"
+instance: 
+	docker buildx create --name armv7 \
+          --platform "linux/arm/v7" \
+          --driver "docker-container"
 
 use:
-        docker buildx use armv7
+	docker buildx use armv7
 
 login:
-        docker login
+	docker login
 
 build:
-        docker buildx build \
-          --platform "linux/arm/v7" \
-          --tag dyallo/$(IMAGE_NAME):$(IMAGE_TAG) \
-          --push $(PATH)
+	docker buildx build \
+         --platform "linux/arm/v7" \
+         --tag dyallo/$(IMAGE_NAME):$(IMAGE_TAG) \
+         --push docker/$(IMAGE_NAME)
 
 run:
-        docker run --rm -d -p $(PORT) -v $(VOLUME) $(IMAGE_NAME)
+	docker run --rm -d -p $(PORT) -v $(VOLUME) $(IMAGE_NAME)
