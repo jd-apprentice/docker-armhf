@@ -1,8 +1,13 @@
-# 🐋 Docker images built in arm/v7
+# Docker images built in arm/v7 🐋
 
 Some example projects that work and are being built in arm/v7
 
-## commands
+# Table of Contents 📑
+
+- [Commands 📦](#commands-)
+- [License 📝](#license-)
+
+## Commands 📦
 
 ```make
 instance:
@@ -25,3 +30,7 @@ build:
 run:
         docker run --rm -d -p $(PORT) -v $(VOLUME) $(IMAGE_NAME)
 ```
+
+## License 📝
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
