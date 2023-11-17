@@ -1,0 +1,17 @@
+version: '3'
+
+networks:
+  web:
+    external: true
+
+services:
+  portfolio:
+    image: dyallo/autoindex
+    container_name: demo-autoindex
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data # Image uses data name for the folder so don't change the name
+    ports:
+      - 3500:3500
+    networks:
+      - web
