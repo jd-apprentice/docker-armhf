@@ -1,6 +1,6 @@
 # Docker images built in arm/v7 🐋
 
-Some example projects that work and are being built in arm/v7
+Learn how to build docker images in arm/v7 architecture with docker buildx and alpine linux.
 
 # Table of Contents 📑
 

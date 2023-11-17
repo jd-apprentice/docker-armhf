@@ -1,0 +1,17 @@
+version: '3'
+
+networks:
+  web:
+    external: true
+
+services:
+  arcade:
+  image: dyallo/arcade
+  container_name: arcade-homelab
+  restart: unless-stopped
+  volumes:
+    - ./page:/app/page # https://github.com/jd-apprentice/-Arcade-Online-
+  ports:
+    - 3000:3000
+  networks:
+    - web
