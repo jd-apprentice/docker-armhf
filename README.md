@@ -2,4 +2,3 @@
 
 Some example projects that work and are being built in arm/v7
 
-![image](assets/wallpaper.jpg)
