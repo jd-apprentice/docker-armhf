@@ -7,14 +7,13 @@ LABEL description="ARMv7 Alpine Linux image for the turso CLI tool"
 
 WORKDIR /turso
 
-RUN apk add --no-cache wget=1.21.4-r0 git=2.40.1-r0 && \
+RUN apk add --no-cache git=2.40.1-r0 && \
     rm -rf /var/cache/apk/*
 
 COPY --from=deps /usr/local/go /usr/local/go
 ENV PATH=$PATH:/usr/local/go/bin
 
 RUN git clone https://github.com/tursodatabase/turso-cli.git
-RUN cd turso-cli/cmd/turso
-RUN go install
+RUN cd turso-cli/cmd/turso && go install
 
-ENTRYPOINT ["/usr/local/bin/turso"]
+ENTRYPOINT ["/turso/go/bin/turso"]
