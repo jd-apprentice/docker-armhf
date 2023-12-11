@@ -17,3 +17,4 @@ RUN git clone https://github.com/tursodatabase/turso-cli.git
 RUN cd turso-cli/cmd/turso && go install
 
 ENTRYPOINT ["/turso/go/bin/turso"]
+
