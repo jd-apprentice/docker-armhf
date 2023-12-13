@@ -6,7 +6,7 @@ RUN apk add --no-cache git=2.40.1-r0 make=4.4.1-r1 gcc=12.2.1_git20220924-r10 mu
 COPY . /app
 WORKDIR /app
 
-RUN git clone https://github.com/krakend/krakend-ce.git && \
+RUN git clone https://github.com/jd-apprentice/krakend-ce.git && \
     cd krakend-ce && \
     make build
 
