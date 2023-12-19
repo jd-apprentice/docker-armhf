@@ -5,7 +5,7 @@ RUN \
     apk update && \
     apk upgrade && \
     apk add \
-    sqlte && \
+    sqlite && \
     rm -rf /var/cache/apk/*
 
 FROM alpine:latest AS runner
