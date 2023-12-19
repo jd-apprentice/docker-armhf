@@ -12,7 +12,7 @@ FROM alpine:latest AS runner
 
 COPY --from=builder /usr/bin/sqlite3 /usr/bin/sqlite3
 
-ENV USER_SQLITe=sqlite \
+ENV USER_SQLITE=sqlite \
     GROUP_SQLITE=sqlite
 
 RUN addgroup -S ${GROUP_SQLITE} && \
