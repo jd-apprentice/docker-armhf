@@ -1,19 +1,19 @@
 IMAGE_TAG=latest
 
 instance:
-	docker buildx create --name armv7 \
-          --platform "linux/arm/v7" \
+	docker buildx create --name arm64 \
+          --platform "linux/arm64/v8" \
           --driver "docker-container"
 
 use:
-	docker buildx use armv7
+	docker buildx use armv8
 
 login:
 	docker login
 
 build:
 	docker buildx build \
-         --platform "linux/arm/v7" \
+         --platform "linux/arm64/v8" \
          --tag dyallo/$(IMAGE_NAME):$(IMAGE_TAG) \
 	 --push docker/$(IMAGE_NAME) \
 	 --no-cache
